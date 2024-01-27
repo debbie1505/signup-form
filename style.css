@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   --primary-color: #ceeaa0;
+  --primary-fontcolor: rgb(83, 81, 81);
 }
 
 body {
   display: flex;
   flex-direction: row;
+  font-family: "Poppins", sans-serif;
 }
 
 .logo-section {
@@ -42,35 +46,131 @@ h1 {
   font-size: 3em;
   z-index: 10;
   color: whitesmoke;
+  font-weight: 1000;
 }
 
 li {
   list-style: none;
-  margin: 2em;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: gray;
 }
 
 h2 {
   font-size: 2em;
+  margin-bottom: 0.9em;
+  font-weight: 1000;
+  color: var(--primary-fontcolor);
+}
+
+.intro {
   margin-top: 2em;
+  padding: 2em;
+  font-weight: 1000;
+  color: var(--primary-fontcolor);
 }
 
 .form-section {
-  padding: 3em;
   width: 100%;
   background: var(--primary-color);
-  max-height: 100vh;
+  color: var(--primary-fontcolor);
+  height: 100vh;
 }
 
 .form-container {
   background: white;
+  color: gray;
+  padding: 1em;
+  box-shadow: 5px 5px 5px gray;
+  margin-left: 1em;
+  margin-right: 1em;
   border-radius: 10px;
-  padding: 0.7rem;
 }
 
 p {
   font-size: 1.5em;
+  font-weight: 800;
 }
 
-ul {
+.outer-container {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+}
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.8em;
+  border-radius: 10px;
+  margin: 1em;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px gray;
+  border-color: white;
+  font-weight: 800;
+  cursor: pointer;
+  width: 10rem;
+  color: var(--primary-fontcolor);
+  transition: transform 0.3s ease;
+  font-size: 1em;
+}
+button:hover {
+  transform: translate(2px, -2px);
+  color: var(--primary-color);
+  background-color: var(--primary-fontcolor);
+}
+
+input {
+  appearance: none;
+  width: 20rem;
+  margin-bottom: 1em;
+  height: 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+input:focus {
+  border: 2px solid blue;
+  box-shadow: 5px 5px 5px var(--primary-color);
+  transform: translate(2px, -2px);
+}
+input:hover {
+  box-shadow: 5px 5px 5px var(--primary-color);
+  transform: translate(2px, -2px);
+}
+
+label {
+  text-transform: capitalize;
+}
+
+.form-items {
+  display: flex;
+  flex-direction: column;
+}
+input:nth-child(odd) {
+  margin-right: 2rem;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+a {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: gray;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.9;
+  color: var(--primary-fontcolor);
 }

@@ -11,7 +11,7 @@
 body {
   display: flex;
   flex-direction: row;
-  font-family: "Poppins", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .logo-section {
@@ -145,6 +145,10 @@ input:hover {
   transform: translate(2px, -2px);
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
 label {
   text-transform: capitalize;
 }
@@ -173,4 +177,14 @@ a {
 a:hover {
   opacity: 0.9;
   color: var(--primary-fontcolor);
+}
+
+.login {
+  padding: 1rem;
+}
+
+.hint {
+  font-size: 0.7rem;
+  color: gray;
+  margin-top: -10px;
 }
